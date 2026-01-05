@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils"
 import { useState } from "react"
 import { Send } from "lucide-react"
 
-// --- Chatbot Component Definition ---
 function ChatbotBar() {
   const [value, setValue] = useState("")
   const prompts = [
@@ -31,7 +30,6 @@ function ChatbotBar() {
           <form
             onSubmit={(e) => {
               e.preventDefault()
-              // Handle submission logic here
               setValue("")
             }}
             className="flex items-center gap-2"
@@ -53,7 +51,6 @@ function ChatbotBar() {
             </button>
           </form>
 
-          {/* Clickable Prompts */}
           <div className="mt-3 flex flex-wrap items-center gap-2 text-sm">
             {prompts.map((prompt) => (
               <button
@@ -72,11 +69,9 @@ function ChatbotBar() {
   )
 }
 
-// --- Main Hero Component ---
 export default function Hero() {
   return (
     <section className="relative">
-      {/* Decorative soft glow behind the illustration */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div
           className="absolute right-0 top-10 h-56 w-56 rounded-full blur-3xl opacity-40"
@@ -132,7 +127,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Integrated Chatbot Bar */}
       <ChatbotBar />
     </section>
   )
